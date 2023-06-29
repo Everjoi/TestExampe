@@ -1,0 +1,75 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Last Tables</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            table td, table th {
+                padding: 8px;
+                border: 1px solid #ddd;
+            }
+
+            table th {
+                background-color: #f2f2f2;
+            }
+    </style>
+</head>
+<body>
+    <h1>Table View</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Record Date</th>
+                <th>Branch Id</th>
+                <th>Counterparty Id</th>
+                <th>Counterparty Name</th>
+                <th>Contact Id</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Amount</th>
+                <th>Process</th>
+                <th>Wetness</th>
+                <th>Garbage</th>
+                <th>Infection</th>
+                <th>Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var record in Model)
+            {
+                     <tr>
+                        <td>@record.RecordDate</td>
+                        <td>@record.BranchId</td>
+                        <td>@record.CounterpartyId</td>
+                        <td>@record.CounterpartyName</td>
+                        <td>@record.ContactId</td>
+                        <td>@record.Product</td>
+                        <td>@record.Price</td>
+                        <td>@record.Amount</td>
+                        <td>@record.Process</td>
+                        <td>@record.Wetness</td>
+                        <td>@record.Garbage</td>
+                        <td>@record.Infection</td>
+                    </tr>
+                               
+            }
+        </tbody>
+    </table>
+
+
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="/Home/Index" style=" display: inline-block; padding: 10px 20px; border: 1px solid #ccc; border-radius: 4px; text-decoration: none; color: #333; font-weight: bold; background-color: #f5f5f5;">Main Table</a>
+    </div>
+
+
+</body>
+</html>
+
+
